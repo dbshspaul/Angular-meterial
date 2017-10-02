@@ -1,0 +1,24 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align: center">
+	<h1>Welcome to {{title}}!</h1>
+</div>
+<h2>Here are some links to help you start:</h2>
+<md-checkbox>Check me!</md-checkbox>
+
+
+<form class="example-form">
+	<md-form-field class="example-full-width"> 
+	<input placeholder="Pick one" aria-label="Number" mdInput [formControl]="myControl" [mdAutocomplete]="auto">
+		 <md-autocomplete #auto="mdAutocomplete">
+		  <md-option *ngFor="let option of filteredOptions | async" [value]="option">
+		{{ option }} </md-option> 
+		</md-autocomplete>
+	 </md-form-field>
+</form>
+
+<md-select placeholder="Favorite food" [multiple]='true' [(ngModel)]='selectedValue'> <md-option
+	*ngFor="let food of foods" [value]="food.value"> {{
+food.viewValue }}</md-option> </md-select>
+
+
+<button md-raised-button color="primary" (click)='onBtnClick()'>Primary</button>
