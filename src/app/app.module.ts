@@ -1,10 +1,13 @@
-import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatCheckboxModule} from '@angular/material';
-import {MatAutocompleteModule} from '@angular/material';
+import {
+  MatAutocompleteModule,
+  MatButtonModule,
+  MatCheckboxModule,
+  MatSelectModule,
+  MdInputModule
+} from '@angular/material';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatSelectModule, MdInputModule, MatButtonModule} from '@angular/material';
 
 import {AppComponent} from './app.component';
 
@@ -25,4 +28,5 @@ import {AppComponent} from './app.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+}
